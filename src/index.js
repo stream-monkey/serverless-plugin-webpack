@@ -74,13 +74,13 @@ class ServerlessPluginWebpack {
     const dest = path.join(this.originalServicePath, serverlessFolder);
     return fs.copy(src, dest)
       .then(() => {
-        if (type === 'service') {
-          this.serverless.service.functions = service.setFnsArtifacts(
-            dest,
-            this.serverless.service.functions
-          );
-        }
-        return fs.remove(path.join(this.originalServicePath, webpackFolder));
+//        if (type === 'service') {
+//          this.serverless.service.functions = service.setFnsArtifacts(
+//           dest,
+//            this.serverless.service.functions
+//          );
+//        }
+//        return fs.remove(path.join(this.originalServicePath, webpackFolder));
       });
   }
 }
